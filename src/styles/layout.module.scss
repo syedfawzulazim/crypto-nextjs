@@ -1,0 +1,93 @@
+@import "../styles//main/variables";
+@import "../styles//main/mixins";
+
+/* Spacing */
+.br {
+  border: 2px solid red;
+}
+
+.container {
+  max-width: 69.5625rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--py {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--pt {
+    padding-top: 4.375rem;
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 4.375rem;
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+  &--bg {
+    background-color: beige;
+  }
+}
+
+/* flexbox */
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+/* button */
+
+.button {
+  display: inline-block;
+  padding: 0.875rem 2.1875rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, $clr-LimeGreen, $clr-BrightCyan);
+  color: white;
+  font-weight: 400;
+  font-size: $font-sm;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+/* Visibility */
+
+.hide-for-mobile-tablet {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
