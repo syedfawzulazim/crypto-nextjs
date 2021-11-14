@@ -1,6 +1,40 @@
 @import "../styles//main/variables";
 @import "../styles//main/mixins";
 
+.div {
+  background-color: #20222c;
+  color: white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px repeat(9, 1fr);
+  grid-template-rows: 45px auto 45px;
+  grid-template-areas:
+    "S N N N N N N N N N"
+    "S B B B B B B B B B"
+    "S F F F F F F F F F";
+}
+
+@include breakpoint-up(xlarge) {
+  .div {
+    grid-template-columns: 210px repeat(9, 1fr);
+  }
+}
+
+@include breakpoint-down(small) {
+  .div {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "N"
+      "B"
+      "B"
+      "B"
+      "B"
+      "B"
+      "F";
+  }
+}
+
 /* Spacing */
 .br {
   border: 2px solid red;
@@ -81,7 +115,7 @@
 /* Visibility */
 
 .hide-for-mobile-tablet {
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     display: none;
   }
 }

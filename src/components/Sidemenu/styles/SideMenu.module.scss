@@ -1,0 +1,48 @@
+.sideMenu-top {
+  height: 2.7rem;
+  padding: 0.5rem;
+  background-color: #2b4175;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: hidden;
+  border-right: 0.1px solid rgb(59, 76, 116);
+}
+
+.sideMenu-top__info {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  margin-left: 10px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.sideMenu__bottom {
+  background-color: #101a32;
+  height: calc(100vh - 2.7rem);
+}
+
+.sideMenu__bottom__li {
+  border-bottom: 1px solid gainsboro;
+  cursor: pointer;
+}
+
+.sideMenu__bottom__li:hover {
+  background-color: rgb(33, 52, 82);
+}
+
+.sideMenu__bottom__link {
+  color: rgb(255, 255, 255);
+
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.active {
+  background-color: rgb(250, 23, 201);
+}
