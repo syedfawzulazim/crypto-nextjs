@@ -1,9 +1,7 @@
 import Head from "next/head";
-import styles from "../styles/index.module.scss";
-import layout from "../styles/layout.module.scss";
-import { Body, Navbar, SideMenu, Footer } from "../containers";
+import { Body } from "../containers";
 
-export default function Index() {
+const Index: React.FC = () => {
   return (
     <div>
       <Head>
@@ -16,4 +14,6 @@ export default function Index() {
       </div>
     </div>
   );
-}
+};
+
+export default Index;

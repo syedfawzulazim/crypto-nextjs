@@ -34,14 +34,13 @@
 
 .sideMenu__bottom__link {
   color: rgb(255, 255, 255);
-
-  text-decoration: none;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
   align-items: center;
   width: 100%;
   padding: 10px;
+  font-size: medium;
 }
 .active {
   background-color: rgb(250, 23, 201);

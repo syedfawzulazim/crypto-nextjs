@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar: React.FC = () => {
   return (
     <div className={styles.div}>
-      <Link href={"/"} passHref>
+      <Link href="/" passHref>
         <h2 style={{ textAlign: "center" }}>CryptoMarket</h2>
       </Link>
     </div>

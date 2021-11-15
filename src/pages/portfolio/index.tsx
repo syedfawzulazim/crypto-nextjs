@@ -1,11 +1,11 @@
 import React from "react";
 
-function Portfolio() {
+const Portfolio: React.FC = () => {
   return (
     <div>
       <h2>Portfolio Page</h2>
     </div>
   );
-}
+};
 
 export default Portfolio;

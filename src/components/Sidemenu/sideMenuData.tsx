@@ -7,7 +7,14 @@ import {
   Straighten,
 } from "@material-ui/icons";
 
-const sideMenuData = [
+interface sideMenuDataType {
+  id: string;
+  title: string;
+  icon: JSX.Element;
+}
+[];
+
+const sideMenuData: sideMenuDataType[] = [
   {
     id: "e01",
     title: "Dashboard",
