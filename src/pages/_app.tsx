@@ -6,7 +6,6 @@ import styles from "../styles/layout.module.scss";
 import { Navbar, SideMenu, Footer } from "../containers";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  console.log(pageProps);
   return (
     <div className={styles.div}>
       <Navbar />

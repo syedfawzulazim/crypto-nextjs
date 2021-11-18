@@ -1,9 +1,8 @@
-import React, { useReducer, useState, useCallback } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import Link from "next/link";
 import styles from "./styles/SideMenu.module.scss";
 
-type itemType = {
+export type itemType = {
   id: string;
   title: string;
   icon: JSX.Element;
@@ -13,10 +12,8 @@ const SideMenuOptions: React.FC<{ index: number; item: itemType }> = (
   props
 ) => {
   const onClickHandler = () => {
-    // props.onClick(props.item["title"]);
+    console.log(props.item["title"]);
   };
-
-  const router = useRouter();
 
   return (
     <li
@@ -25,7 +22,7 @@ const SideMenuOptions: React.FC<{ index: number; item: itemType }> = (
       // style={props.state ? { backgroundColor: 'red' } : { backgroundColor: '' }}
       onClick={onClickHandler}
     >
-      <Link key={props.index} href={props.item.title.toLowerCase()}>
+      <Link key={props.index} href={`/${props.item.title.toLowerCase()}`}>
         <a className={styles["sideMenu__bottom__link"]}>
           {props.item.icon}
           {props.item.title}

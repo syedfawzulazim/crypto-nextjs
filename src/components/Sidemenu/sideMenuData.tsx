@@ -12,7 +12,6 @@ interface sideMenuDataType {
   title: string;
   icon: JSX.Element;
 }
-[];
 
 const sideMenuData: sideMenuDataType[] = [
   {
